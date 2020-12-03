@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>registro</title>
+</head>
+<body>
+<p>Aqui Inicia el registro de personas</p>
+
+    <form method="post">
+        {{formulario.csrf_token}}<!--indicamos el token es importante agregar si no se puede usar el formlario-->
+
+<p>
+    {{formulario.nombre.label}}<br>
+    {{formulario.nombre(size=40)}}
+</p>
+<p>
+    {{formulario.apellido.label}}<br>
+    {{formulario.apellido(size=40)}}
+</p>
+<p>
+    {{formulario.correo.label}}<br>
+    {{formulario.correo(size=40)}}
+</p>
+<p>
+    {{formulario.usuario.label}}<br>
+    {{formulario.usuario(size=40)}}
+</p>
+<p>
+    {{formulario.contrasenia.label}}<br>
+    {{formulario.contrasenia(size=40)}}
+</p>
+        <p>
+         {{formulario.registrar()}}
+        </p>
+
+
+
+    </form>
+
+<div>
+     <button type="button"><a href="{{url_for('Inicio')}}">Regresar al inicio</a></button>
+</div>
+</body>
+
+</html>
