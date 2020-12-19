@@ -9,4 +9,4 @@ class Usuario_form(FlaskForm):#clase para el form
     correo=StringField('Email',validators=[DataRequired()])
     usuario=StringField('Usuario')
     contrasenia=StringField('Contraseña',validators=[DataRequired()])
-    registrar=SubmitField('Registrarse')#este es para el boton
+    Enviar=SubmitField('Registrarse')#este es para el boton

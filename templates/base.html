@@ -3,14 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title>Inicio</title>
+
 </head>
-<body>
-<p>Buenas Tardes esto es una prueba de backend </p>
+<body >
+{% block content %}
+{% endblock %}
+<hi>Buenas Tardes esto es una prueba de backend </hi>
 <br>
 <p>Total de usuarios en la base de datos {{total_usuario}}</p>
 <button type="button" ><a href="{{url_for('Registrar')}}">Registrarse</a></button>
 <button type="button"><a href="{{url_for('Iniciar_Sesion')}}">Iniciar Sesion</a></button>
+<button type="button"><a href="{{url_for('Listado')}}">listado</a></button>
+</body>
+</html>
+<body>
 
 
 </body>
-</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>listado</title>
+</head>
+<body style="background:yellow;">
+<h1>Usuario Registrados en la base de datos</h1>
+<div>
+    <table border="3">
+        <thead>
+        <tr><!--cabeceros-->
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Apellido</th><!--renglon de cabeceros-->
+            <th>Correo</th>
+            <th>Usuario</th>
+            <th>Contraseña</th>
+            </tr><!--cabeceros-->
+        </thead>
+        <tbody>
+         {%for usuario in usuarios%}<!--para iterar-->
+        <tr><!--renglon-->
+
+           <td><!--celdas-->{{usuario.id}} </td><!--celdas-->
+           <td><!--celdas-->{{usuario.nombre}} </td><!--celdas-->
+           <td><!--celdas-->{{usuario.apellido}} </td><!--celdas-->
+           <td><!--celdas-->{{usuario.correo}} </td><!--celdas-->
+            <td>{{usuario.usuario}}</td>
+            <td>{{usuario.contrasenia}}</td>
+        </tr><!--renglon-->
+          {%endfor%}
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
